@@ -45,9 +45,8 @@ if [[ ${space_left} < ${space_need} ]]; then
         echo "[FAIL] could not create ${dest}! EXIT..."
         exit 1
     else
-        echo "[ok]"
+        echo "[ok] logfile will be written to ${log_file}"
     fi
-    echo "logfile will be written to ${log_file}"
 else
     echo "[FAIL] not enough space on device! EXIT..."
     exit 1
@@ -56,7 +55,6 @@ fi
 log "START captureing Timelaps ${why}"
 log "${pic_max} files will be created as: ${dest}[xx].jpg"
 log "${pic_space} MB space is needed..."
-
 
 for i in $(eval echo "{1..$pic_max}"); do
     log "..4..3..2..1..smile...";
