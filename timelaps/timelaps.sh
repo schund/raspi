@@ -19,13 +19,13 @@ dest="${pic_dir}${why}/"
 
 if [ ! -d $pic_dir ]; then
     echo "[FAIL] mountpoint does not exist! EXIT..."
-    exit
+    exit 1
 else
     if [ ! -d $dest ]; then
         echo "[ok]"
     else
         echo "[FAIL] reason already exists! EXIT..."
-        exit
+        exit 1
     fi
 fi
 
@@ -43,7 +43,7 @@ if [[ ${space_left} < ${space_need} ]]; then
     /bin/mkdir ${dest}
     if [ "$?" -ne "0" ]; then
         echo "[FAIL] could not create ${dest}! EXIT..."
-        exit
+        exit 1
     else
         echo "[ok]"
     fi
