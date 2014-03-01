@@ -1,5 +1,11 @@
-I started with a simple:
+If you have a camera for your raspberry pi, you simple make pictures with
+
+raspistill -o name.jpg
+
+So why not put this in a loop? I started with a simple:
 
 for i in {1..10}; do
     raspistill -o foto${i}.jpg
 done
+
+But then I was like....

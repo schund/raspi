@@ -2,6 +2,7 @@
 
 # bash-script for raspberry pi with camera to make time laps photos
 # need to install mathematic-library bc! "apt-get update && apt-get install bc"
+# to put the pictures together to a movie I use iMovie...
 
 log_date="$( date +%Y%m%d-%H%M )"
 log_dir="/srv/logs/"
